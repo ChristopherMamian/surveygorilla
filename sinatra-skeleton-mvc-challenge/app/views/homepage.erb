@@ -1,0 +1,13 @@
+
+
+
+<h1>Welcome to Gorilla Surveys</h1>
+<h2>Here are all the surveys</h2>
+
+<% if @surveys %>
+<% @surveys.each do |survey| %>
+	<p><a href=""><%= survey.title %></a></p>
+<% end %>
+<% end %>
+
+<a href="surveys/new">Create a new survey</a>
