@@ -1,14 +1,23 @@
 .container {
 	border: 1px black solid;
 	margin: 0, auto;
-	width: 40%;
+	width: 60%;
 	padding: 10px;
 	padding-left: 20px;
 }
 .container2 {
 	border: 1px black solid;
 	margin: 0, auto;
-	width: 60%;
+	width: 80%;
+	padding: 10px;
+	padding-left: 20px;
+	margin-top: 20px;
+	margin-left: 30px;
+}
+.container3 {
+	border: 1px black solid;
+	margin: 0, auto;
+	width: 80%;
 	padding: 10px;
 	padding-left: 20px;
 	margin-top: 20px;

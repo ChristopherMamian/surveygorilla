@@ -13,3 +13,6 @@ post '/questions/new' do
 	# Question.create(question: params[:question])
 end
 
+post '/choices/new' do
+	# Choice.create(content: params[:content])
+end
