@@ -1,4 +1,5 @@
-get '/' do
+get '/homepage' do
+	# @surveys = Survey.all
 	erb :homepage
 end
 
