@@ -6,6 +6,10 @@ get '/surveys/new' do
 end
 
 post '/surveys/new' do
-	p params[:survey]
-	# Survey.create(params[:survey])
+	# Survey.create(title: params[:title])
 end
+
+post '/questions/new' do
+	# Question.create(question: params[:question])
+end
+
