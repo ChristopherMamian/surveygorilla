@@ -4,10 +4,14 @@ $("body").on("click", "#add_question_button", function(e) {
 	var ajaxRequest = $.ajax ({
 		url: '/question_form',
 		type: 'GET',
-	}).done(function(sentBackData) {
-		$('.question_partial_target').append(sentBackData)	
-	})
-})
+	}).done(addFunction.bind(this))})
+
+function addFunction (sentBackData) {
+		debugger;
+		var new_name = $('.container .container2').children("input").length
+		var updated_num_name = $(sentBackData).find('input[name="question[]"]').attr("name", "question[" +new_name + "]")
+		$('.question_partial_target').append(updated_num_name)	
+}
 
 $('body').on("click", "#add_choice_button", function(e){
 	e.preventDefault();

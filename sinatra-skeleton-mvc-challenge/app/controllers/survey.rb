@@ -7,11 +7,10 @@ get '/surveys/new' do
 end
 
 post '/surveys/new' do
-	content_type :json
+	p params
 	survey = Survey.create(title: params[:title])
 	question = Question.create(question: params[:question], survey_id: survey.id)
 	choice = Choice.create(content: params[:content], question_id: question.id)
-	"hello".to_json
 end
 
 post '/questions/new' do
