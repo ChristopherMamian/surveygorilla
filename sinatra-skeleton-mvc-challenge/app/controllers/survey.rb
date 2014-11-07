@@ -34,7 +34,9 @@ end
 get "/surveys/:id/view_results" do
   @survey = Survey.find(params[:id])
   @questions = @survey.questions
+  @answers = Answer.all
   erb :view_results
+end
 
 post '/surveys/new' do
 	survey = Survey.create(title: params[:title])
