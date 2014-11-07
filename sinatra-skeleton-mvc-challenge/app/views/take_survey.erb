@@ -4,26 +4,13 @@ Where they take the survey
 <h2>Fill out the forms below</h2>
 
 <form action='/surveys/new' method='POST'>
-<h3> Survey Title Here </h3>
-
-<h4> Question 1 Here </h4>
-  <input type="checkbox" name="choice1" value="choice1">Choice 1<br>
-  <input type="checkbox" name="choice2" value="choice2">Choice 2<br>
-  <input type="checkbox" name="choice3" value="choice3">Choice 3<br>
-  <input type="checkbox" name="choice4" value="choice4">Choice 4<br>
-
-<h4> Question 2 Here </h4>
-  <input type="checkbox" name="choice1" value="choice1">Choice 1<br>
-  <input type="checkbox" name="choice2" value="choice2">Choice 2<br>
-  <input type="checkbox" name="choice3" value="choice3">Choice 3<br>
-  <input type="checkbox" name="choice4" value="choice4">Choice 4<br>
- <!--  -->
-
-<h4> Question 3 Here </h4>
-  <input type="checkbox" name="choice1" value="choice1">Choice 1<br>
-  <input type="checkbox" name="choice2" value="choice2">Choice 2<br>
-  <input type="checkbox" name="choice3" value="choice3">Choice 3<br>
-  <input type="checkbox" name="choice4" value="choice4">Choice 4<br>
+<h3> <%= @survey.title %> </h3>
+<% @questions.each do |question| %>
+  <h4> <%= question.question %> </h4>
+    <% question.choices.each do |choice| %>
+      <input type="checkbox" name="choice1" value="choice1"><%= choice.content %></input><br>
+    <% end %>
+  <% end %>
 
 
   <input type='submit' value='Submit'>

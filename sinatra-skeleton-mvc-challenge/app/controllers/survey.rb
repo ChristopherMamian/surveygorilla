@@ -18,6 +18,8 @@ post '/choices/new' do
 	# Choice.create(content: params[:content])
 end
 
-get '/surveys/:title' do
+get '/surveys/:id' do
+  @survey = Survey.find(params[:id])
+  @questions = @survey.questions
   erb :take_survey
 end
