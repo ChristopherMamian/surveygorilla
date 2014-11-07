@@ -1,5 +1,5 @@
  
-$("#add_question_button").on("click", function(e) {
+$("body").on("click", "#add_question_button", function(e) {
 	e.preventDefault();
 	var ajaxRequest = $.ajax ({
 		url: '/question_form',
@@ -23,34 +23,20 @@ $('body').on("click", "#add_choice_button", function(e){
 	}
 
 
-
-
-
-
-
-
-
-
-
-$('some-button').on("click", someFunction);
+$('#add_survey_button').on("click", someFunction);
 
 function someFunction() {
-	$.ajax ({
-		url: '/survey_form'
-		
+	var ajax = $.ajax ({
+		url: '/survey_form',
+		type: 'get'
 	})
-	
+	ajax.done(anotherFunction) 
+
+	function anotherFunction(sentBackData) {
+		$('body').append(sentBackData);
+	}
+	$('#add_survey_button').off()
 }
-
-
-
-
-
-
-
-
-
-
 
 
 
