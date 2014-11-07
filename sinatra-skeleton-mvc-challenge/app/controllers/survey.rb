@@ -1,5 +1,5 @@
 get '/homepage' do
-	# @surveys = Survey.all
+	@surveys = Survey.all
 	erb :homepage
 end
 
@@ -16,4 +16,8 @@ end
 
 post '/choices/new' do
 	# Choice.create(content: params[:content])
+end
+
+get '/surveys/:title' do
+  erb :take_survey
 end
