@@ -1,10 +1,9 @@
-<div class="container2">
-<form action='/questions/new' method='POST'>
+<div class="question-container">
 	<input type='text' name='question' placeholder='Question'>
-	<input type='submit' value='Submit'>
-</form>
-<%= erb :_choice %>
-<%= erb :_choice %>
-<%= erb :_choice %>
-<%= erb :_choice %>
+	<div class="choice_partials_appended_here">
+	<%= erb :_choice %>
+	<%= erb :_choice %>
+	<br>
+	<button id="add_choice_button">Add another choice</button>
+	</div>
 </div>
