@@ -9,6 +9,7 @@
 	<p><a href=""><%= survey.title %></a></p>
 <% end %>
 <% end %>
-
-<button id="add_survey_button">Create a new survey</button>
-
+<form>
+	<input type="submit" formaction="/surveys/new">
+<!-- <button type ="submit" formaction="/surveys/new">Create a new survey</button> -->
+</form>
