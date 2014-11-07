@@ -7,6 +7,9 @@
 <% if @surveys %>
 <% @surveys.each do |survey| %>
 	<p> <a href=<%="/surveys/#{survey.id}"%>> <%= survey.title %></a></p>
+  <form action=<%="/surveys/#{survey.id}/view_results"%>>
+    <input type="submit" value="button" >
+  </form>
 <% end %>
 <% end %>
 
