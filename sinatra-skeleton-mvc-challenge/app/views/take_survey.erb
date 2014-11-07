@@ -1,0 +1,17 @@
+Where they take the survey
+
+<h1>Survey</h1>
+<h2>Fill out the forms below</h2>
+
+<form action="/surveys/answer" method="post">
+<h3> <%= @survey.title %> </h3>
+<% @questions.each do |question| %>
+  <h4> <%= question.question %> </h4>
+    <% question.choices.each do |choice| %>
+      <input type="radio" name=<%="#{choice.id}"%>><%= choice.content %><br>
+    <% end %>
+  <% end %>
+
+
+  <input type="submit" value="Submit">
+</form>
