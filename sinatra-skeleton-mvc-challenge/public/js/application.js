@@ -61,9 +61,9 @@ function someFunction() {
 	$('#add_survey_button').off()
 }
 
-$(function(){
-	$("#draggable").draggable();
-})
+// $(function(){
+// 	$("#draggable").draggable();
+// })
 
 
 

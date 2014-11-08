@@ -35,12 +35,13 @@ get "/surveys/:id/view_results" do
   @survey = Survey.find(params[:id])
   @questions = @survey.questions
   erb :view_results
+end
 
 post '/surveys/new' do
 	survey = Survey.create(title: params[:title])
 	question = Question.create(question: params[:question], survey_id: survey.id)
 	choice = Choice.create(content: params[:content], question_id: question.id)
-
+  redirect '/homepage'
 end
 
 get 'surveys/:survey_id/question_form/:question_id' do
