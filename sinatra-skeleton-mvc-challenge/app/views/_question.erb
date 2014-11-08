@@ -1,9 +1,12 @@
 <div class="question-container">
-	<input type='text' name='question' placeholder='Question'>
-	<div class="choice_partials_appended_here">
+	<input type='text' class="question_name" name='question' placeholder='Question'>
+	<div id="div_with_button">
+  <div class="choice_partials_appended_here">
+    <br>
 	<%= erb :_choice %>
 	<%= erb :_choice %>
 	<br>
+  </div>
 	<button id="add_choice_button">Add another choice</button>
 	</div>
 </div>

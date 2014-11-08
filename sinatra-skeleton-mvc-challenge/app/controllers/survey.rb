@@ -5,7 +5,12 @@
 end
 
 get '/surveys/new' do
-	erb :new_survey
+	# erb :new_survey
+  erb :_survey
+end
+
+get '/question_form' do
+  erb :_question
 end
 
 post '/questions/new' do
