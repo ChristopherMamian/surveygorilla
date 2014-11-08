@@ -1,18 +1,25 @@
-
-
-
+<header>
+	<div class="panel">
+	<div class="panel-heading"/>
 <h1>Welcome to Gorilla Surveys</h1>
-<h2>Here are all the surveys</h2>
+<img src="http://i690.photobucket.com/albums/vv264/Argonaut77/100x100_1239374329_cartoon_gorilla.gif"/>
+</div>
+</div>
+</header>
 
+<form class="create_survey">
+	<input type="submit" formaction="/surveys/new" value="Create a new survey">
+<!-- <button type ="submit" formaction="/surveys/new">Create a new survey</button> -->
+</form>
+
+<h2>Here are all the surveys</h2>
+<div class="survey_list">
 <% if @surveys %>
 <% @surveys.each do |survey| %>
 	<p> <a href=<%="/surveys/#{survey.id}"%>> <%= survey.title %></a></p>
-  <form action=<%="/surveys/#{survey.id}/view_results"%>>
-    <input type="submit" value="button" >
-  </form>
+    <button formaction="<%="/surveys/#{survey.id}/view_results"%>" type="submit">
+    	<img src="http://img3.wikia.nocookie.net/__cb20120909235939/clubpenguin/images/e/e8/Smoothie_Smash_Banana.png" alt="submit"/>
+    </button>
 <% end %>
 <% end %>
-<form>
-	<input type="submit" formaction="/surveys/new">
-<!-- <button type ="submit" formaction="/surveys/new">Create a new survey</button> -->
-</form>
+</div>
